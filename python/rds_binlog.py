@@ -8,8 +8,8 @@ import uuid,time,json,wget
 class RDS_BINLOG_RELATE(object):
 
     def __init__(self):
-        self.access_id = '*************'
-        self.access_key = '*************'
+        self.access_id = '*******************'
+        self.access_key = '******************'
 
     #通过id和key来进行签名
     def signed(self):
@@ -21,7 +21,7 @@ class RDS_BINLOG_RELATE(object):
             'EndTime': timestamp,
             'Format': 'JSON',
             'Version': '2014-08-15',
-            'AccessKeyId': 'LTAIRrEMWqcD9kYX',
+            'AccessKeyId': self.access_id,
             'SignatureVersion': '1.0',
             'SignatureMethod': 'HMAC-SHA1',
             'SignatureNonce': str(uuid.uuid1()),
